@@ -29,67 +29,66 @@ y = ['Male', 'Female', 'Female', 'Female', 'Male', 'Male', 'Male', 'Female', 'Ma
 X_new = [[190, 70, 43]]
 
 # 1. Using Decision Tree Classifier
-clf = tree.DecisionTreeClassifier()
-clf = clf.fit(X, y)
+clf_tree = tree.DecisionTreeClassifier()
+clf_tree = clf_tree.fit(X, y)
 
 #tree_prediction = clf.predict([[190, 70, 43]])
 
-tree_prediction = clf.predict(X_new)
+tree_prediction = clf_tree.predict(X_new)
 print("1. Prediction using Decision Tree Classifier model: ", tree_prediction)
 
 # 2. Using Logistic Regression Classifier
-clf_2 = LogisticRegression(C = 1.0, solver = 'lbfgs')
-clf_2.fit(X, y)
+clf_logistic_regression = LogisticRegression(C = 1.0, solver = 'lbfgs')
+clf_logistic_regression.fit(X, y)
 
-logistic_regression_prediction = clf_2.predict(X_new)
+logistic_regression_prediction = clf_logistic_regression.predict(X_new)
 print("2. Prediction using Logistic Regression model: ", logistic_regression_prediction)
 
 # 3. Using Artificial Neural Network MLPCLassifier
-clf_3 = MLPClassifier(hidden_layer_sizes = (10, 10), activation = 'relu')
-clf_3.fit(X, y)
+clf_ann_mlp_classifier = MLPClassifier(hidden_layer_sizes = (10, 10), activation = 'relu')
+clf_ann_mlp_classifier.fit(X, y)
 
-neural_network_prediction = clf_3.predict(X_new)
+neural_network_prediction = clf_ann_mlp_classifier.predict(X_new)
 print("3. Prediction using ANN model: ", neural_network_prediction)
 
 # 4. Using SVC (Support Vector Machine)
-clf_4 = svm.SVC(kernel = 'linear', C = 1.0)
-clf_4.fit(X, y)
+clf_svm = svm.SVC(kernel = 'linear', C = 1.0)
+clf_svm.fit(X, y)
 
-svc_prediction = clf_4.predict(X_new)
+svc_prediction = clf_svm.predict(X_new)
 print("4. Prediction using SVM: ", svc_prediction)
 
 # 5. Using Naive Bayes (NB) - GaussianNB
-clf_5 = GaussianNB()
-clf_5.fit(X, y)
+clf_gaussian_nb = GaussianNB()
+clf_gaussian_nb.fit(X, y)
 
-gaussian_naive_bayes_prediction = clf_5.predict(X_new)
+gaussian_naive_bayes_prediction = clf_gaussian_nb.predict(X_new)
 print("5. Prediction using Gaussian Naive Bayes model: ",gaussian_naive_bayes_prediction)
 
 # 6. Using KNN (K-Nearest Neighbors)
-clf_6 = KNeighborsClassifier(n_neighbors = 5)
-clf_6.fit(X, y)
+clf_knn = KNeighborsClassifier(n_neighbors = 5)
+clf_knn.fit(X, y)
 
-knn_prediction = clf_6.predict(X_new)
+knn_prediction = clf_knn.predict(X_new)
 print("6. Prediction using KNN (with K = 5) model: ", knn_prediction)
 
 # 7. Using RandomForestClassifier
-clf_7 = RandomForestClassifier()
-clf_7.fit(X, y)
+clf_random_forest_classifier = RandomForestClassifier()
+clf_random_forest_classifier.fit(X, y)
 
-random_forest_classifier_prediction = clf_7.predict(X_new)
+random_forest_classifier_prediction = clf_random_forest_classifier.predict(X_new)
 print("7. Prediction using Random Forest Classifier model: ", random_forest_classifier_prediction)
 
 # 8. Using ExtraTreesClassifier
-clf_8 = ExtraTreesClassifier()
-clf_8.fit(X, y)
+clf_extra_trees_classifier = ExtraTreesClassifier()
+clf_extra_trees_classifier.fit(X, y)
 
-extra_trees_classifier_prediction = clf_8.predict(X_new)
+extra_trees_classifier_prediction = clf_extra_trees_classifier.predict(X_new)
 print("8. Prediction using Extra Trees Classifier model: ", extra_trees_classifier_prediction)
 
 # 9. Using Gradient Boosting Trees (GBT)
-clf_9 = GradientBoostingClassifier()
-clf_9.fit(X, y)
+clf_gradient_boosting_trees = GradientBoostingClassifier()
+clf_gradient_boosting_trees.fit(X, y)
 
-gradient_boosting_classifier_prediction = clf_9.predict(X_new)
+gradient_boosting_classifier_prediction = clf_gradient_boosting_trees.predict(X_new)
 print("9. Prediction using Gradient Boosting Trees (GBT): ", gradient_boosting_classifier_prediction)
-
