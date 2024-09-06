@@ -118,57 +118,39 @@ print("\nTesting model accuracy using test data: ")
 
 # 1. Using Decision Tree Classifier
 tree_prediction_2 = clf_tree.predict(X_test)
-### print("1. Prediction using Decision Tree Classifier model: ", tree_prediction_2)
 accuracy_score_tree = accuracy_score(y_test, tree_prediction_2) * 100
-### print(accuracy_score_tree)
 
 # 2. Using Logistic Regression Classifier
 logistic_regression_prediction_2 = clf_logistic_regression.predict(X_test)
-### print("2. Prediction using Logistic Regression model: ", logistic_regression_prediction_2)
 accuracy_score_logistic_regression = accuracy_score(y_test, logistic_regression_prediction_2) * 100
-### print(accuracy_score_logistic_regression)
 
 # 3. Using Artificial Neural Network MLPCLassifier
 neural_network_prediction_2 = clf_ann_mlp_classifier.predict(X_test)
-### print("3. Prediction using ANN model: ", neural_network_prediction_2)
 accuracy_score_neural_network = accuracy_score(y_test, neural_network_prediction_2) * 100
-### print(accuracy_score_neural_network)
 
 # 4. Using SVC (Support Vector Machine)
 svm_prediction_2 = clf_svm.predict(X_test)
-### print("4. Prediction using SVM: ", svm_prediction_2)
 accuracy_score_svm = accuracy_score(y_test, svm_prediction_2) * 100
-### print(accuracy_score_svm)
 
 # 5. Using Naive Bayes (NB) - GaussianNB
 gaussian_naive_bayes_prediction_2 = clf_gaussian_nb.predict(X_test)
-### print("5. Prediction using Gaussian Naive Bayes model: ", gaussian_naive_bayes_prediction_2)
 accuracy_score_gaussian_naive_bayes = accuracy_score(y_test, gaussian_naive_bayes_prediction_2) * 100
-### print(accuracy_score_gaussian_naive_bayes)
 
 # 6. Using KNN (K-Nearest Neighbors)
 knn_prediction_2 = clf_knn.predict(X_test)
-### print("6. Prediction using KNN (with K = 5) model: ", knn_prediction_2)
 accuracy_score_knn = accuracy_score(y_test, knn_prediction_2) * 100
-### print(accuracy_score_knn)
 
 # 7. Using RandomForestClassifier
 random_forest_classifier_prediction_2 = clf_random_forest_classifier.predict(X_test)
-### print("7. Prediction using Random Forest Classifier model: ", random_forest_classifier_prediction_2)
 accuracy_score_random_forest_classifier = accuracy_score(y_test, random_forest_classifier_prediction_2) * 100
-### print(accuracy_score_random_forest_classifier)
 
 # 8. Using ExtraTreesClassifier
 extra_trees_classifier_prediction_2 = clf_extra_trees_classifier.predict(X_test)
-### print("8. Prediction using Extra Trees Classifier model: ", extra_trees_classifier_prediction_2)
 accuracy_score_extra_trees_classifier = accuracy_score(y_test, extra_trees_classifier_prediction_2) * 100
-### print(accuracy_score_extra_trees_classifier)
 
 # 9. Using Gradient Boosting Trees (GBT)
 gradient_boosting_classifier_prediction_2 = clf_gradient_boosting_trees.predict(X_test)
-### print("9. Prediction using Gradient Boosting Trees (GBT): ", gradient_boosting_classifier_prediction_2)
 accuracy_score_gradient_boosting_classifier = accuracy_score(y_test, gradient_boosting_classifier_prediction_2) * 100
-### print(accuracy_score_gradient_boosting_classifier)
 
 # Initializing dictionary for classifier models with their accuracy scores
 
@@ -184,12 +166,8 @@ classifier_accuracy_dictionary = {
 	'Gradient Boosting Trees (GBT)': accuracy_score_gradient_boosting_classifier
 }
 
-### print(classifier_accuracy_dictionary)
-
 #sorted_classifier_accuracy_dictionary = sorted(classifier_accuracy_dictionary.items(), key = lambda item: item[1], reverse = True) 
 sorted_classifier_accuracy_dictionary = dict(sorted(classifier_accuracy_dictionary.items(), key = itemgetter(1), reverse = True))
-
-### print(sorted_classifier_accuracy_dictionary)
 
 print("Classifiers with accuracy score results (in descending order of scores): ")
 
