@@ -1,9 +1,13 @@
 # Learning Repository #1 - Python: Data Science
 
+## 1. Introduction - Gender Classification
+
 ## Dependencies
 
 - Scikit-learn
 - scipy
+
+Data sampled from: [Dataset of people's height, weight and shoe size](https://www.kaggle.com/datasets/peimandaii/dataset-of-people/data)
 
 ## References:
 
