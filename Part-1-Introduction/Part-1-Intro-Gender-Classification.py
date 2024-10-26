@@ -171,5 +171,19 @@ sorted_classifier_accuracy_dictionary = dict(sorted(classifier_accuracy_dictiona
 
 print("Classifiers with accuracy score results (in descending order of scores): ")
 
+"""
 for index, (key, value) in enumerate(sorted_classifier_accuracy_dictionary.items(), start = 1):
 	print(f"{index}. {key}: {value}")
+"""
+
+# Implementing shared ranks
+
+rank = 0
+previous = None
+
+for key, value in sorted_classifier_accuracy_dictionary.items():	
+    if value != previous:
+        rank += 1
+        previous = value
+        
+    print(f"{rank}. {key}: {value}")
